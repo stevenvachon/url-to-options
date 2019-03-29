@@ -8,7 +8,7 @@
   "devDependencies": {
     "semver": "^6.0.0",
     "universal-url": "^2.0.0",
-    "whatwg-url": "^7.0.0"
+    "whatwg-url": "^5.0.0"
   },
   "engines": {
     "node": ">=4"
