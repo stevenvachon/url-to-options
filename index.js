@@ -7,7 +7,9 @@
 function urlToOptions(url) {
   var options = {
     protocol: url.protocol,
-    hostname: url.hostname,
+    hostname: url.hostname.startsWith('[') ?
+      url.hostname.slice(1, -1) :
+      url.hostname,
     hash: url.hash,
     search: url.search,
     pathname: url.pathname,
