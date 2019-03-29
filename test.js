@@ -21,8 +21,7 @@ assert.strictEqual(opts.pathname, '/aaa/zzz');
 assert.strictEqual(opts.search, '?l=24');
 assert.strictEqual(opts.hash, '#test');
 
-const { hostname } = urlToOptions(new URL('http://[::1]:21'));
-assert.strictEqual(hostname, '::1');
+assert.strictEqual(urlToOptions(new URL('http://[::1]:21')).hostname, '::1');
 
 // If a WHATWG URL object is copied, it is possible that the resulting copy
 // contains the Symbols that Node uses for brand checking, but not the data
@@ -34,7 +33,7 @@ assert.strictEqual(copiedOpts instanceof URL, false);
 assert.strictEqual(copiedOpts.protocol, undefined);
 assert.strictEqual(copiedOpts.auth, undefined);
 assert.strictEqual(copiedOpts.hostname, undefined);
-assert.strictEqual(copiedOpts.port, NaN);
+(semver.satisfies(process.version, '>= 9') ? assert.strictEqual : Object.is)(copiedOpts.port, NaN);
 assert.strictEqual(copiedOpts.path, '');
 assert.strictEqual(copiedOpts.pathname, undefined);
 assert.strictEqual(copiedOpts.search, undefined);
