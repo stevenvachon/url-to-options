@@ -11,7 +11,7 @@
     "whatwg-url": "^5.0.0"
   },
   "engines": {
-    "node": ">= 4"
+    "node": ">=4"
   },
   "scripts": {
     "test": "node test.js"
