@@ -7,13 +7,13 @@
 function urlToOptions(url) {
   var options = {
     protocol: url.protocol,
-    hostname: url.hostname.startsWith('[') ?
+    hostname: typeof url.hostname === 'string' && url.hostname.startsWith('[') ?
       url.hostname.slice(1, -1) :
       url.hostname,
     hash: url.hash,
     search: url.search,
     pathname: url.pathname,
-    path: `${url.pathname}${url.search}`,
+    path: `${url.pathname || ''}${url.search || ''}`,
     href: url.href
   };
   if (url.port !== '') {
