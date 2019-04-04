@@ -7,11 +7,10 @@
   "repository": "github:stevenvachon/url-to-options",
   "devDependencies": {
     "semver": "^6.0.0",
-    "universal-url": "^2.0.0",
-    "whatwg-url": "^5.0.0"
+    "universal-url": "^2.0.0"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=8"
   },
   "scripts": {
     "test": "node test.js"

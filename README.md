@@ -5,7 +5,7 @@
 
 ## Installation
 
-[Node.js](http://nodejs.org/) `>= 4` is required. To install, type this at the command line:
+[Node.js](http://nodejs.org/) `>= 8` is required. To install, type this at the command line:
 ```shell
 npm install url-to-options
 ```
@@ -19,7 +19,7 @@ const urlToOptions = require('url-to-options');
 const url = new URL('http://user:pass@hostname:8080/');
 
 const opts = urlToOptions(url);
-//-> { auth:'user:pass', port:8080, … }
+//-> { auth:'user:pass', port:8080, &#x2026; }
 ```
 
 

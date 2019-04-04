@@ -3,7 +3,7 @@ const assert = require('assert');
 const semver = require('semver');
 const urlToOptions = require('./');
 
-const URL = require(semver.satisfies(process.version, '>= 6') ? 'universal-url' : 'whatwg-url').URL;
+const URL = require('universal-url').URL;
 
 
 
