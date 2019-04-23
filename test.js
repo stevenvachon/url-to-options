@@ -3,7 +3,7 @@ const assert = require('assert');
 const semver = require('semver');
 const urlToOptions = require('./');
 
-const {URL} = require('universal-url');
+const {URL} = require('url');
 
 
 
