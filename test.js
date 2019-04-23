@@ -3,11 +3,11 @@ const assert = require('assert');
 const semver = require('semver');
 const urlToOptions = require('./');
 
-const URL = require('universal-url').URL;
+const {URL} = require('universal-url');
 
 
 
-// Copied from https://github.com/nodejs/node/blob/master/test/parallel/test-whatwg-url-properties.js
+// Copied from https://github.com/nodejs/node/blob/master/test/parallel/test-whatwg-url-custom-properties.js
 
 const urlObj = new URL('http://user:pass@foo.bar.com:21/aaa/zzz?l=24#test');
 const opts = urlToOptions(urlObj);

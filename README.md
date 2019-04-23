@@ -19,7 +19,7 @@ const urlToOptions = require('url-to-options');
 const url = new URL('http://user:pass@hostname:8080/');
 
 const opts = urlToOptions(url);
-//-> { auth:'user:pass', port:8080, &#x2026; }
+//-> { auth:'user:pass', port:8080, … }
 ```
 
 
